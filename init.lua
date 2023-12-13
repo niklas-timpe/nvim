@@ -1,0 +1,1 @@
+require("nvimo-veritas")
