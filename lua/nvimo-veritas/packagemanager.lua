@@ -38,14 +38,14 @@ require("lazy").setup({
     'talha-akram/noctis.nvim',
         -- colorschemes end
     {'chentoast/marks.nvim'},
-    {
-        'mrcjkb/haskell-tools.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-        },
-        version = '^3', -- Recommended
-        ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
-    },
+    -- {
+    --     'mrcjkb/haskell-tools.nvim',
+    --     dependencies = {
+    --         'nvim-lua/plenary.nvim',
+    --     },
+    --     version = '^3', -- Recommended
+    --     ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
+    -- },
     {
         'ThePrimeagen/harpoon'
     },
