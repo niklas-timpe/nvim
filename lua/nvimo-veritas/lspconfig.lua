@@ -4,11 +4,28 @@ local lspconfig = require('lspconfig')
 -- The Language Servers:
 lspconfig.rust_analyzer.setup{
   -- Server-specific settings. See `:help lspconfig-setup`
+  cmd = { "/home/niklas/.local/bin/rust-analyzer" },
   settings = {
     ['rust-analyzer'] = {},
   },
 }
 
+lspconfig.zls.setup {
+    on_attach = function()
+        vim.g.zig_fmt_autosave = 0
+    end,
+
+  -- Server-specific settings. See `:help lspconfig-setup`
+
+  -- There are two ways to set config options:
+  --   - edit your `zls.json` that applies to any editor that uses ZLS
+  --   - set in-editor config options with the `settings` field below.
+  --
+  -- Further information on ZLS config options:
+  -- https://github.com/zigtools/zls#configuration-options
+  settings = {
+  }
+}
 
 lspconfig.clangd.setup{}
 
@@ -23,14 +40,15 @@ lspconfig.clangd.setup{}
 --     }
 -- }
 local perlconfig = {
-    cmd = { "/usr/bin/pls" },
+    cmd = { "/home/niklas/perl5/bin/pls" },
     settings = {
         pls = {
-            cwd = {"/home/niklas/frequenzgithub/gateway-install"}
+            --cwd = {"/home/niklas/frequenzgithub/gateway-install"}
         }
     },
 }
 lspconfig.perlpls.setup(perlconfig)
+lspconfig.sourcekit.setup {}
 
 
 

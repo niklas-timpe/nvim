@@ -30,3 +30,12 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80,100"
 
+
+
+-- FOLDING
+--vim.opt.foldmethod = "expr"
+--vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- far from optimal i need to use autocmd for lua here. but still need research
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+--vim.opt.foldlevelstart=20

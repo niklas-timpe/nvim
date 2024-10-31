@@ -21,3 +21,4 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
 -- Lazy Git
 vim.keymap.set("n", "<leader>lg", vim.cmd.LazyGit)
+

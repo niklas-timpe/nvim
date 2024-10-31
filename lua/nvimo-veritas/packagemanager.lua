@@ -33,10 +33,12 @@ require("lazy").setup({
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
         -- here goes my colorscheme
+    "nyoom-engineering/oxocarbon.nvim",
     'bignimbus/pop-punk.vim',
     'fcpg/vim-farout',
     'talha-akram/noctis.nvim',
-        -- colorschemes end
+    'projekt0n/github-nvim-theme',
+    -- colorschemes end
     {'chentoast/marks.nvim'},
     -- {
     --     'mrcjkb/haskell-tools.nvim',
@@ -79,4 +81,10 @@ require("lazy").setup({
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
+    'f-person/git-blame.nvim',
+    'ziglang/zig.vim', -- https://github.com/ziglang/zig.vim
+    'jbyuki/instant.nvim',
+    'xiyaowong/transparent.nvim',
+    -- DELETE EVERYTHING AFTER THIS
+    'ThePrimeagen/vim-be-good'
 })
