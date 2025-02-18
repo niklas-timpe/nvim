@@ -4,7 +4,7 @@ local lspconfig = require('lspconfig')
 -- The Language Servers:
 lspconfig.rust_analyzer.setup{
   -- Server-specific settings. See `:help lspconfig-setup`
-  cmd = { "/home/niklas/.local/bin/rust-analyzer" },
+  cmd = { "/Users/niklas/.cargo/bin/rust-analyzer" },
   settings = {
     ['rust-analyzer'] = {},
   },
@@ -27,6 +27,15 @@ lspconfig.zls.setup {
   }
 }
 
+lspconfig.jsonls.setup {
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  },
+}
+
 lspconfig.clangd.setup{}
 
 
@@ -39,16 +48,16 @@ lspconfig.clangd.setup{}
 --         }
 --     }
 -- }
-local perlconfig = {
-    cmd = { "/home/niklas/perl5/bin/pls" },
-    settings = {
-        pls = {
-            --cwd = {"/home/niklas/frequenzgithub/gateway-install"}
-        }
-    },
-}
-lspconfig.perlpls.setup(perlconfig)
-lspconfig.sourcekit.setup {}
+-- local perlconfig = {
+--     cmd = { "/home/niklas/perl5/bin/pls" },
+--     settings = {
+--         pls = {
+--             --cwd = {"/home/niklas/frequenzgithub/gateway-install"}
+--         }
+--     },
+-- }
+-- lspconfig.perlpls.setup(perlconfig)
+-- lspconfig.sourcekit.setup {}
 
 
 

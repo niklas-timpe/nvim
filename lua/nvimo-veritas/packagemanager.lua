@@ -32,12 +32,14 @@ require("lazy").setup({
         'nvim-telescope/telescope.nvim', tag = '0.1.3',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' },
         -- here goes my colorscheme
     "nyoom-engineering/oxocarbon.nvim",
     'bignimbus/pop-punk.vim',
     'fcpg/vim-farout',
     'talha-akram/noctis.nvim',
     'projekt0n/github-nvim-theme',
+    { "EdenEast/nightfox.nvim" },
     -- colorschemes end
     {'chentoast/marks.nvim'},
     -- {
@@ -86,5 +88,26 @@ require("lazy").setup({
     'jbyuki/instant.nvim',
     'xiyaowong/transparent.nvim',
     -- DELETE EVERYTHING AFTER THIS
-    'ThePrimeagen/vim-be-good'
+    'ThePrimeagen/vim-be-good',
+    {
+        'nvim-flutter/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+        config = true,
+    },
+    "b0o/schemastore.nvim",
+    {
+        'ribru17/bamboo.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require('bamboo').setup {
+                -- optional configuration here
+            }
+            require('bamboo').load()
+        end,
+    },
 })
